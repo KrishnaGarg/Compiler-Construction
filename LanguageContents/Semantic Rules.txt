@@ -1,0 +1,32 @@
+/* Group - 20
+* Yash Sinha 2012C6PS365P
+* Krishna Garg 2012A7PS033P
+*/
+
+TYPE CHECKING RULES
+The type of a simple expression (say E) of the form expression(say E1)
+<operator> Expression (say E2)
+a. is integer, if both expressions are of type integer and the operator is
+arithmetic operator.
+b. is real, if both the expressions are of type real and the operator is
+arithmetic operator.
+c. is boolean, if both expressions are of type boolean and the operator is
+logical.
+d. is char, if both expressions are of type char and the operator is
+supported (=).
+e. The type of the expression is ERROR, if the above rules do not derive the
+type of E appropriately.
+
+SEMANTIC RULES
+i. An identifier cannot be declared multiple times in the same scope.
+ii. An identifier must be declared before its use.
+iii. A proc must be declared before its call.
+iv. An if statement must have the expression of boolean type.
+v. An identifier used beyond its scope must be viewed as undefined
+vi. A record type definition is visible only in the execute block.
+vii. The right hand side expression of an assignment statement.
+viii. Program statements must be declared in Record, Procs, Execute block according
+to their category, strictly in this order.
+ix. A record must be declared before its use.
+x. An record cannot be declared multiple times in the same scope.
+xi. A proc cannot be declared multiple times in the same scope.
