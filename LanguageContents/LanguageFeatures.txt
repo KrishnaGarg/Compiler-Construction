@@ -1,0 +1,52 @@
+LANGUAGE FEATURES:
+
+-> Data types: Integer, Real, Boolean, String, Character, Record, Matrix (1D & 2D)
+
+-> Operations for data types:
+o Integer - addition, subtraction, division, multiplication, exponent, comparison.
+o Real - addition, subtraction, division, muliplication, exponent, comparison.
+o Boolean - equality check, logical not operation.
+o Char - addition, subtraction, comparison.
+o String - concatenation, length, character at position.
+o Matrix - addition, number of rows and columns, accessing element
+o Record - operation on elements based on data type mentioned above.
+
+-> Functions:
+o Allows more than one return values.
+o Nested functions are not allowed.
+o Basic data types - int, real, char, bool can be passed as arguments and returned from functions.
+o Arguments are passed by value.
+o Seperate section of function declaration to avoid confusion.
+
+-> Scope rules:
+o Static scoping.
+
+-> Conditional Statement:
+o If else statement with keyword: if, elif, else, endif.
+
+-> Iterative statement:
+o Loop structure: loop (intialize) (condition) (update): …. endloop.
+o Allows programmers to define condition with break and continue statements.
+
+-> I/O operations:
+o get - gets the value of variable according to its data type from stdin.
+o put - prints the value of variable, string literal, tab, newline to stdout.
+
+-> Expression:
+o Operator precedence same as C.
+o Arithmetic operators : +, -, /, *, %, **(pow)
+o Relational operators: <, >, <=, >=, ==, !=
+o Logical operators: AND, OR, NOT
+
+-> Assignment statement:
+o Allows matrix and string initialization.
+o Allows assignment of basic data types.
+
+-> Strongly typed language.
+
+-> Doesn’t support type conversion.
+
+-> Same syntax for single and multi line comments:
+o Syntax : /* Comment here */
+
+-> Allows formatting code using tabs to improve readability of code.
