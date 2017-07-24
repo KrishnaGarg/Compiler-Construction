@@ -1,6 +1,6 @@
 This repository contains:
 
-Pdf file: descibes specifications of the language designed
-TestCases folder: some test cases for the language
-ProjectCode folder: source code for designing compiler
-LanguageContents folder: language features & constructs, grammar, first & follow set, parse table, semantic rules
+1 Pdf file: descibes specifications of the language designed
+2 TestCases folder: some test cases for the language
+3 ProjectCode folder: source code for designing compiler
+4 LanguageContents folder: language features & constructs, grammar, first & follow set, parse table, semantic rules
