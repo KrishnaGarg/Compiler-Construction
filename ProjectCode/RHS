@@ -1,0 +1,142 @@
+_records _procedures execute
+EXECUTE COLON stmts END
+records
+EPSILON
+RECORDS COLON recs ENDRECORDS
+rec _recs
+recs
+EPSILON
+REC ID COLON decl_stmts ENDREC
+procedures
+EPSILON
+decl_stmt _decl_stmts
+decl_stmts
+EPSILON
+type id_list SEMICOLON
+basic_type 
+STRING 
+MAT LT basic_type GT LSQ dims RSQ
+REC ID
+INT
+REAL
+BOOL
+CHAR
+ID _id_list
+COMMA id_list
+EPSILON
+INT_LIT _int_lit
+COMMA INT_LIT
+EPSILON
+PROCS COLON procs ENDPROCS
+proc _procs
+procs
+EPSILON
+PROC ID LPAREN param_list RPAREN ARROW LPAREN param_list RPAREN COLON stmts ENDPROC
+basic_type ID _param_list
+COMMA param_list 
+EPSILON
+stmt _stmts
+stmts 
+EPSILON
+decl_stmt 
+cond_stmt 
+loop_stmt 
+proc_call_stmt 
+assign_stmt 
+io_stmt 
+mat_assign_stmt 
+str_assign_stmt
+IF LPAREN conds RPAREN COLON stmts else_if _cond_stmt
+ELIF LPAREN conds RPAREN COLON stmts else_if
+EPSILON
+ELSE COLON stmts ENDIF
+ENDIF
+GET LPAREN var RPAREN SEMICOLON
+PUT LPAREN put_param RPAREN SEMICOLON
+var
+ENDL
+TAB
+STR_LIT
+ID _var
+LSQ dims RSQ
+DOT ID
+EPSILON
+CALL ID LPAREN proc_arg_list RPAREN ARROW LPAREN proc_arg_list RPAREN SEMICOLON 
+arg_list
+EPSILON 
+ID arg_list1
+COMMA arg_list
+LSQ dims RSQ arg_list2
+DOT ID arg_list2
+EPSILON
+COMMA arg_list
+EPSILON
+LOOP LPAREN assign_list RPAREN LPAREN conds RPAREN LPAREN assign_list RPAREN COLON iloop_stmts ENDLOOP
+iloop_stmt iloop_stmts
+EPSILON
+stmt
+BREAK SEMICOLON
+CONTINUE SEMICOLON
+assign_stmt assign_list
+EPSILON
+LPAREN conds RPAREN logical_op LPAREN conds RPAREN
+elem rel_op elem
+NOT LPAREN conds RPAREN
+BOOL_LIT
+AND
+OR
+LT
+GT
+LE
+GE
+EQ
+NEQ
+var
+INT_LIT
+REAL_LIT
+CHAR_LIT
+ASSIGN var ASSIGN_OP expr SEMICOLON
+term _expr
+op_sa term _expr
+EPSILON
+expo_term _term
+op_mdp expo_term _term
+EPSILON
+factor _expo_term
+op_mm factor _expo_term
+EPSILON
+LPAREN expr RPAREN
+var
+_const
+MINUS LPAREN expr RPAREN
+PLUS 
+MINUS
+MUL
+DIV
+MOD
+POW
+MATASSIGN ID ASSIGN_OP mat_stmt
+LCURL row_list RCURL SEMICOLON
+ID _mat_stmt 
+PLUS ID SEMICOLON
+MAT_ROWS SEMICOLON
+MAT_COLS SEMICOLON
+row _row_list
+SEMICOLON row row_list 
+EPSILON
+_const _row
+COMMA _const row
+EPSILON
+INT_LIT
+REAL_LIT
+BOOL_LIT
+CHAR_LIT
+STRASSIGN ID ASSIGN_OP str_stmt 
+STR_LIT SEMICOLON
+ID _str_stmt
+SEMICOLON
+PLUS ID SEMICOLON
+LSQ ind RSQ SEMICOLON
+ STR_LENGTH SEMICOLON 
+ID
+INT_LIT
